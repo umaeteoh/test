@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Assignment 3 </title>
+
+    <script>
+        function cat(){
+			var catButton = document.getElementById("catButton");
+			catButton.classList.add("borderColour");
+			dogButton.classList.remove("borderColour");
+            frogButton.classList.remove("borderColour");
+
+            var displayField = document.getElementById("inputDisplay");
+			displayField.value = "User clicks Cat";
+            
+            var displaySpan = document.getElementById("display");      
+            displaySpan.innerHTML = "Cat is clicked";
+
+            var image = document.getElementById("imgDisplay");
+			image.src = "cat.png";
+		}
+		function dog(){
+			var dogButton = document.getElementById("dogButton");
+			dogButton.classList.add("borderColour");
+			catButton.classList.remove("borderColour");
+            frogButton.classList.remove("borderColour");
+
+            var displayField = document.getElementById("inputDisplay");
+			displayField.value = "User clicks Dog";
+
+            var displaySpan = document.getElementById("display");      
+            displaySpan.innerHTML = "Dog is clicked";
+
+            var image = document.getElementById("imgDisplay");
+			image.src = "dog.png";
+        }
+        function frog(){
+            var frogButton = document.getElementById("frogButton");
+			frogButton.classList.add("borderColour");
+			catButton.classList.remove("borderColour");
+            dogButton.classList.remove("borderColour");
+            
+            var displayField = document.getElementById("inputDisplay");
+			displayField.value = "User clicks Frog";
+
+            var displaySpan = document.getElementById("display");      
+            displaySpan.innerHTML = "Frog is clicked";
+
+            var image = document.getElementById("imgDisplay");
+			image.src = "frog.png";
+        }
+    </script>
+
+    <style>
+        /* Task 2 */
+        h1 {
+            color:red;
+        }
+
+        #textStyle {
+            color:plum;
+            background-color:lavender;
+            border-style:dotted;
+            border-width:2px;
+            border-color:magenta;
+            font-family:'Times New Roman', Times, serif;
+            padding-left:10px;}
+
+        #tableStyle {
+            border-style:dotted;
+            border-color:black;
+            border-width:2px;}
+
+        #headerRow {
+            text-align:left;
+            color:black;
+            background-color:lightgray;
+            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif}
+
+        tr.oddRow {
+            background-color:white;
+            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;}
+
+        tr.evenRow {
+            background-color:lavender;
+            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;}
+
+        #tableStyle th {
+            padding:10px;
+            border-style:dotted;
+            border-width:2px;
+            border-color:black;}
+
+        #tableStyle td {
+            padding:10px;}
+
+        #headerStyle {
+            font-size:30px;
+            color:navy;}
+
+        /* Task 3 */
+        #tableFormat th {
+            padding:10px;
+            border-style:solid;
+            border-width:2px;
+            border-color:black;}
+
+        #tableFormat td {
+            padding:10px;
+            border-style:solid;
+            border-width:2px;
+            border-color:black;}
+
+        /* Task 4 */
+        .borderColour {
+            border-color:black;}
+    </style>
+
+</head>
+
+<body>
+    <h1> Task 1 </h1>
+    <div id="textStyle">
+        <h2> 8262019 U-Mae Teoh </h2>
+        <h3> COMP804: Web Security </h3>
+        <h4> Assignment 3, due 21st August 2023 </h4>
+    </div>
+
+    <h1> Task 2 </h1>
+    <table id="tableStyle">
+        <tr id="headerRow">
+            <th> Activity </th>
+            <th> Date </th>
+        </tr>
+        <tr class="oddRow">
+            <td> First day to enrol for re-enrolling (continuing students) </td>
+            <td> 21 Nov 2022 </td>
+        </tr>
+        <tr class="evenRow">
+            <td> Orientation </td>
+            <td> 18 Jul 2023 </td>
+        </tr>
+        <tr class="oddRow">
+            <td> Lectures commence (weeks 1-9) </td>
+            <td> 24 Jul - 22 Sep 2023 </td>
+        </tr>
+        <tr class="evenRow">
+            <td> Last day to enrol/ add subjects yourself </td>
+            <td> 04 Aug 2023 </td>
+        </tr>
+        <tr class="oddRow"> 
+            <td> Last day to enrol/ add subjects with Head of Students approval </td>
+            <td> 11 Aug 2023 </td>
+        </tr>
+        <tr class="evenRow">
+            <td> 
+                <b> CENSUS DATE </b>
+                <ul>
+                    <li> Fees due </li>
+                    <li> Last day to withdraw from subject/s without paying for them </li>
+                    <li> HECS/ FEE HELP debt reporting date </li>
+                    <li> Last day to change HECS/ FEE HELP billing option </li>
+                </ul>
+                <a href="https://uowedu.service-now.com/kb?id=kb_article_view&sysparm_article=KB0012659" target="_blank"> Learn more about Census date > </a>
+            </td>
+            <td> 31 Aug 2023 </td>
+        </tr>
+        <tr class="oddRow">
+            <td> Student Services and Amenities Fees Due </td>
+            <td> 01 Sep 2023 </td>
+        </tr>
+    </table>
+
+    <h1> Task 3 </h1>
+    <table id="tableFormat">
+        <tr id="headerStyle">
+            <th> Name </th>
+            <th> Web Attacks </th>
+        </tr>
+        <tr>
+            <td> 
+                <b> Cross-Site Scripting </b>
+                <br><br>
+                <img src="xss.png" width="200">
+                <br><br>
+                Source: https://www.cloudflare.com/en-gb/learning/security/threats/cross-site-scripting/
+            </td>
+            <td>
+                The attacker sends a link of a website with malicious Javascript code to the victim. When the victim clicks on the link, the victim's browser launches the website and executes the malicious script. The attacker gains access to sensitive data and install malware.
+                <br><br>
+                <a href="https://www.cloudflare.com/en-gb/learning/security/threats/cross-site-scripting/" target="blank"> https://www.cloudflare.com/en-gb/learning/security/threats/cross-site-scripting/ </a>
+            </td>
+        </tr>
+        <tr>
+            <td> 
+                <b> SQL Injection </b>
+                <br><br>
+                <img src="sql.png" width="200">
+                <br><br>
+                Source: https://www.cloudflare.com/en-gb/learning/security/threats/sql-injection/
+            </td>
+            <td>
+                The attacker injects a malicious SQL query into the input fields of an application. This manipulates the application to run the query on the victim's database. The attacker is able to obtain sensitive information, modify data or execute commands on the database.
+                <br><br>
+                <a href="https://owasp.org/www-community/attacks/SQL_Injection" target="blank"> https://owasp.org/www-community/attacks/SQL_Injection </a>
+            </td>
+        </tr>
+        <tr>
+            <td> 
+                <b> Broken Authentication </b>
+                <br><br>
+                <img src="authentication.png" width="200">
+                <br><br>
+                Source: https://www.prplbx.com/resources/blog/broken-authentication/
+            </td>
+            <td>
+                Weaknesses in the authentication or session management of an application create vulnerabilities for attackers to exploit. When users are not properly authenticated, attackers are able to obtain stolen login credentials or hijack session IDs. This leads to data breaches and unauthorised access to sensitive information.
+                <br><br>
+                <a href="https://www.prplbx.com/resources/blog/broken-authentication/" target="blank"> https://www.prplbx.com/resources/blog/broken-authentication/ </a>
+            </td>
+        </tr>
+         <tr>
+            <td> 
+                <b> Drive-by Downloads </b>
+                <br><br>
+                <img src="download.png" width="200">
+                <br><br>
+                Source: https://us.norton.com/blog/malware/what-are-drive-by-downloads
+            </td>
+            <td>
+                Malware is automatically downloaded onto the user's device after the user visits a website. Attackers are able to hijack the user's device, destroy data or obtain personal information. This attack takes advantage of security flaws in not up to date software.  
+                <br><br>
+                <a href="https://www.kaspersky.com/resource-center/definitions/drive-by-download" target="blank"> https://www.kaspersky.com/resource-center/definitions/drive-by-download </a>
+            </td>
+        </tr>
+         <tr>
+            <td> 
+                <b> Password-based Attacks </b>
+                <br><br>
+                <img src="password.png" width="200">
+                <br><br>
+                Source: https://us.norton.com/blog/emerging-threats/password-attack
+            </td>
+            <td>
+                Category of attacks that involve cybercriminals using tools to crack users' passwords. Such methods involve brute force, phishing, keyloggers and credential stuffing. Successful password cracking allows attackers to gain unauthorised access and impersonate victims.
+                <br><br>
+                <a href="https://www.educative.io/answers/what-is-a-password-attack" target="blank"> https://www.educative.io/answers/what-is-a-password-attack </a>
+            </td>
+        </tr>
+         <tr>
+            <td> 
+                <b> Distributed Denial of Service Attacks </b>
+                <br><br>
+                <img src="ddos.png" width="200">
+                <br><br>
+                Source: https://www.cloudflare.com/en-gb/learning/ddos/what-is-a-ddos-attack/
+            </td>
+            <td>
+                The attacker disrupts the functionality of a network or server by overwhelming the infrastructure with a flood of traffic. This results in normal traffic and legitimate users being denied access to the network. This is commonly utilised for hacktivism, revenge or blackmail.
+                <br><br>
+                <a href="https://www.cloudflare.com/en-gb/learning/ddos/what-is-a-ddos-attack/" target="blank"> https://www.cloudflare.com/en-gb/learning/ddos/what-is-a-ddos-attack/ </a>
+            </td>
+        </tr>
+         <tr>
+            <td> 
+                <b> Man in the Middle Attacks </b>
+                <br><br>
+                <img src="mitm.png" width="200">
+                <br><br>
+                Source: https://www.wallarm.com/what/what-is-mitm-man-in-the-middle-attack
+            </td>
+            <td>
+                The attacker stealthily inserts themselves between communications between two parties and intercepts the information transferred. The information is manipulated without the knowledge of the two parties involved. This allows the attacker to obtain and exploit sensitive personal data from the unsuspecting parties.
+                <br><br>
+                <a href="https://en.wikipedia.org/wiki/Man-in-the-middle_attack" target="blank"> https://en.wikipedia.org/wiki/Man-in-the-middle_attack </a>
+            </td>
+        </tr>
+         <tr>
+            <td> 
+                <b> Ransomware </b>
+                <br><br>
+                <img src="ransomware.png" width="200">
+                <br><br>
+                Source: https://blog.ariacybersecurity.com/blog/just-what-is-a-ransomware-attack-and-can-you-prevent-one
+            </td>
+            <td>
+                The victim mistakenly downloads the ransomware from clicking a link, giving the attacker access to their files. The attacker encrypts the files to make them inaccessible to the victim. Then, the attacker demands payment in exchange for the decryption key or to prevent leaks of the victim's data.
+                <br><br>
+                <a href="https://en.wikipedia.org/wiki/Ransomware" target="blank"> https://en.wikipedia.org/wiki/Ransomware </a>
+            </td>
+        </tr>
+         <tr>
+            <td> 
+                <b> Trojan </b>
+                <br><br>
+                <img src="trojan.png" width="200">
+                <br><br>
+                Source: https://vpnoverview.com/internet-safety/malware/trojan-horse/
+            </td>
+            <td>
+                Malware that is disguised as legitimate software to trick users into downloading it. Once installed, Trojans are able to obtain sensitive data, install additional malware and gain control of the victim's device. This attack can be prevented by installing new software updates and not clicking on unfamiliar links. 
+                <br><br>
+                <a href="https://au.norton.com/blog/malware/what-is-a-trojan" target="blank"> https://au.norton.com/blog/malware/what-is-a-trojan </a>
+            </td>
+        </tr>
+         <tr>
+            <td> 
+                <b> Directory Traversal </b>
+                <br><br>
+                <img src="traversal.png" width="200">
+                <br><br>
+                Source: https://www.wallarm.com/what/path-traversal-attack
+            </td>
+            <td>
+                The attacker is able to exploit software on a web server to gain access to directories outside the web root folder. This enables unauthorised access to configuration/ system files and the ability to execute commands on the server. This can be prevented with validation of the user's input.
+                <br><br>
+                <a href="https://owasp.org/www-community/attacks/Path_Traversal" target="blank"> https://owasp.org/www-community/attacks/Path_Traversal </a>
+            </td>
+        </tr>
+    </table>
+
+
+    <h1> Task 4 </h1>
+    <button id="catButton" onClick="cat();">Cat</button>
+	<button id="dogButton" onClick="dog();">Dog</button>
+    <button id="frogButton" onClick="frog();">Frog</button>
+	<br><br>
+	<input id="inputDisplay">
+    <br><br>
+    <span id="display"></span>
+    <br><br>
+    <img id="imgDisplay" width="200"/>
+    <br><br>
+
+    References:
+    <br>
+    cat.png: https://pethelpful.com/cats/Top-10-Cutest-Cat-Photos-of-All-Time
+    <br>
+    frog.png: https://pethelpful.com/reptiles-amphibians/green-tree-frogs
+
+</body>
+
+</html>
